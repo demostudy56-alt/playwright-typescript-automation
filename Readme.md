@@ -11,34 +11,42 @@ This project demonstrates hands-on automation practice using Playwright with Typ
 **IDE:** VS Code
 
 ## Features
-• End-to-end workflow automation of an e-commerce site
-• Reusable Page Object Model structure
-• Data-driven testing using JSON
-• Screenshots and traces for each test run
-• Viewport testing for responsive validation
-• HTML reports for easy result review
+- End-to-end workflow automation of an e-commerce site  
+- Reusable Page Object Model structure  
+- Data-driven testing using JSON  
+- Screenshots and traces for each test run  
+- Viewport testing for responsive validation  
+- HTML reports for easy result review  
 
 ## Test Scenarios
-• Signup with valid data
-• Login with multiple users using JSON test data
-• Add products to cart
-• Place order / checkout
-• Logout
+## UI Scenarios
+- Signup with valid data  
+- Login with multiple users using JSON test data  
+- Add products to cart  
+- Place order / checkout  
+- Logout
+
+## API scenarios 
+| API Endpoint       | Method | Type | Assertions Covered                   | Status |
+|-------------------|--------|------|-------------------------------------|--------|
+| /api/login         | POST   | API  | status code, responseCode, token    | ✅ Done |
+| /api/searchProduct | POST   | API  | status code, products array, price  | ✅ Done |
+
 
 ## Project Structure
 project-root
-tests – Test scripts
-pages – Page Object Model classes
-data – JSON test data
-helpers – Reusable helper functions
-playwright.config.ts
-package.json
-README.md
-.gitignore
+├── tests
+├── pages
+├── data
+├── helpers
+├── playwright.config.ts
+├── package.json
+├── README.md
+└── .gitignore
 
 ## How to Run
-• Clone the repository using your GitHub URL
-• Install dependencies using npm install
-• Install Playwright browsers using npx playwright install
-• Run tests using npx playwright test
-• View the HTML report using npx playwright show-report
+1. Clone the repository  
+2. Run `npm install`  
+3. Run `npx playwright install`  
+4. Execute tests using `npx playwright test`  
+5. View report using `npx playwright show-report`
